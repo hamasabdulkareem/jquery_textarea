@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Hamas_Alrawhani</title>
+</head>
+<body>
+  <div class="conter">
+      <div class="form-input">
+        <label>Maximum 200 characters</label>
+    <textarea id="messag" maxlength="200" placeholder="enter your message"></textarea>
+    <span id="score">200</span> Character(s) Remaining
+</div>
+</div>
+    <script>
+        $(document).ready(function(){
+            var maxLength = 200;
+            $('textarea').keyup(function() {
+            var length = maxLength - $(this).val().length;
+            $("#score").text(length);
+        });
+
+        });      
+    </script>
+</body>
+</html>
